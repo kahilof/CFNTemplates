@@ -49,6 +49,25 @@
             },
             "Type": "AWS::IAM::InstanceProfile"
         },
+        "Policy": {
+            "Properties": {
+                "PolicyDocument": {
+                    "Statement": [
+                        {
+                            "Action": [
+                                "s3:*"
+                            ],
+                            "Effect": "Allow",
+                            "Resource": [
+                                "*"
+                            ]
+                        }
+                    ]
+                },
+                "PolicyName": "AllowS3"
+            },
+            "Type": "AWS::IAM::Policy"
+        },
         "Role": {
             "Properties": {
                 "AssumeRolePolicyDocument": {
